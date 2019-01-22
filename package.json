@@ -1,0 +1,82 @@
+{
+  "bin": {
+    "gitignore": "esm/cli.js"
+  },
+  "main": "esm/index.js",
+  "scripts": {
+    "start": "DEBUG=GITIGNORE:* npx babel-node ./dev",
+    "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/build",
+    "clean": "npx babel-node ./scripts/clean",
+    "license": "npx babel-node ./scripts/license",
+    "reprepare": "npx babel-node ./scripts/re-prepare",
+    "lint": "npx eslint --cache ./src/**/*.js"
+  },
+  "engines": {
+    "node": ">=10.13.0"
+  },
+  "files": [
+    "src/**/*.js",
+    "esm/**/*.js",
+    "templates/**/*.gitignore"
+  ],
+  "name": "@oopsunome/fast-gitignore",
+  "description": "添加 / 更新 `.gitignore`。",
+  "dependencies": {
+    "callsites": "^3.0.0",
+    "chalk": "^2.4.2",
+    "debug": "^4.1.1",
+    "fast-glob": "^2.2.6",
+    "listr": "^0.14.3",
+    "lodash": "^4.17.11",
+    "meow": "^5.0.0",
+    "p-map": "^2.0.0",
+    "update-notifier": "^2.5.0",
+    "write-file-atomic": "^2.3.0"
+  },
+  "private": false,
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.2.2",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-eslint": "^10.0.1",
+    "babel-plugin-add-module-exports": "^1.0.0",
+    "eslint": "^5.12.1",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.14.0",
+    "execa": "^1.0.0",
+    "license-checker": "^25.0.1",
+    "make-dir": "^1.3.0",
+    "trash": "^4.3.0"
+  },
+  "keywords": [
+    "git",
+    "gitignore",
+    "初始化",
+    "init",
+    "脚手架",
+    "scaffold",
+    "生成器",
+    "generator",
+    "工具",
+    "tool",
+    "cli",
+    "oopsunome"
+  ],
+  "version": "0.0.0",
+  "author": {
+    "name": "iyowei",
+    "email": "swzyocowboy@icloud.com",
+    "url": "https://github.com/iTonyYo"
+  },
+  "repository": {
+    "url": "git@github.com:iTonyYo/fast-gitignore.git",
+    "type": "git"
+  },
+  "homepage": "https://github.com/iTonyYo/fast-gitignore",
+  "bugs": "https://github.com/iTonyYo/fast-gitignore/issues",
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
