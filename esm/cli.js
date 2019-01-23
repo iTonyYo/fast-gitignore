@@ -20,13 +20,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
     const cli = (0, _meow.default)(`
       使用方式
         $ fast-gitignore <主题> <...> 选项 [...]
-        $ fg <主题> <...> 选项 [...]
 
       选项
         --out, -o, '.gitignore' 文件存储位置，默认：'process.cwd()'
 
       示例
-        $ fg macOS Windows Linux Node -o .
+        $ fast-gitignore macOS Windows Linux Node -o .
     `, {
       flags: {
         out: {
