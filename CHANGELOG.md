@@ -1,5 +1,10 @@
 # [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 更新日志
 
+## [v1.0.5](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.4...v1.0.5) - 2019-01-23
+
+#### 提交
+
+- [[`6323abc`](https://github.com/iTonyYo/fast-gitignore/commit/6323abc91b7df515faca84a66dce06419e333ef3)] 工程: :clapper: 重新构建
 ## [v1.0.4](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.3...v1.0.4) - 2019-01-23
 
 #### 提交
