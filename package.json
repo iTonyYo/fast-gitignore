@@ -1,7 +1,6 @@
 {
   "bin": {
-    "fast-gitignore": "esm/cli.js",
-    "fg": "esm/cli.js"
+    "fast-gitignore": "esm/cli.js"
   },
   "main": "esm/fastGitignore.js",
   "scripts": {

@@ -69,13 +69,12 @@ import fastGitignore from '@oopsunome/fast-gitignore';
 ```
 $ 使用方式
     $ fast-gitignore <主题> <...> 选项 [...]
-    $ fg <主题> <...> 选项 [...]
 
   选项
     --out, -o, '.gitignore' 文件存储位置，默认：'process.cwd()'
 
   示例
-    $ fg macOS Windows Linux Node -o .
+    $ fast-gitignore macOS Windows Linux Node -o .
 ```
 
 在全局系统环境下使用的话，需要先全局安装 [@oopsunome/fast-gitignore][@oopsunome/fast-gitignore]，
