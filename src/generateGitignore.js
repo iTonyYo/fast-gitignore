@@ -9,6 +9,8 @@ import pMap from 'p-map';
 import isArray from 'lodash/isArray';
 import isString from 'lodash/isString';
 import isEmpty from 'lodash/isEmpty';
+import isEqual from 'lodash/isEqual';
+import size from 'lodash/size';
 
 import saveFile from './saveFile';
 import resolveRoot from './resolveRoot';
@@ -19,6 +21,11 @@ const generateGitignore = async (ignores, to) => {
 
     if (isArray(ignores)) {
       glob = `{${join(ignores, ',')}}`;
+    }
+
+    if (isArray(ignores) && isEqual(size(ignores), 1)) {
+      const [topic] = ignores;
+      glob = topic;
     }
 
     if (isString(ignores)) {

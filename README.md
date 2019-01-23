@@ -1,16 +1,17 @@
 # `@oopsunome/fast-gitignore`
 
-添加 / 更新 `.gitignore`。内嵌 [`@oopsunome/fast-gitignore`]() 维护但来自 [`github/gitignore`] 的模板。
+添加 / 更新 `.gitignore`。内嵌 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 维护但来自 [`github/gitignore`] 的模板。
 
 ## 目录
 
-  - [安装](#安装)
-  - [使用](#使用)
-      - [`fastGitignore(ignores, to)`](#fastgitignoreignores-to)
-  - [参与开发](#参与开发)
-  - [贡献指南](#贡献指南)
-  - [证书](#证书)
-  - [待办](#待办)
+- [安装](#安装)
+- [使用](#使用)
+    - [`fastGitignore(ignores, to)`](#fastgitignoreignores-to)
+    - [命令行](#命令行)
+- [参与开发](#参与开发)
+- [贡献指南](#贡献指南)
+- [证书](#证书)
+- [待办](#待办)
 
 ## 安装
 
@@ -20,16 +21,13 @@ $ npm i @oopsunome/fast-gitignore
 
 # 使用 Yarn
 $ yarn add @oopsunome/fast-gitignore
-
-# 使用 PNPM
-$ pnpm install @oopsunome/fast-gitignore
 ```
 
 ## 使用
 
 #### `fastGitignore(ignores, to)`
 
-- `ignores` {Array | String} 需被 Git 忽略的内容的主题
+- `ignores` {Array | String} 需被 Git 忽略的内容的主题
 - `to` {String} `.gitignore` 文件存储位置
 - 返回: {Object}
   - `out` {String} 生成后的 `.gitignore` 所在位置
@@ -66,6 +64,30 @@ import fastGitignore from '@oopsunome/fast-gitignore';
    * }
    */
 })();
+```
+
+#### 命令行
+
+```
+$ 使用方式
+    $ fast-gitignore <主题> <...> 选项 [...]
+    $ fg <主题> <...> 选项 [...]
+
+  选项
+    --out, -o, '.gitignore' 文件存储位置，默认：'process.cwd()'
+
+  示例
+    $ fg macOS Windows Linux Node -o .
+```
+
+在全局系统环境下使用的话，需要先全局安装 [@oopsunome/fast-gitignore][@oopsunome/fast-gitignore]，
+
+```shell
+# 使用 NPM
+$ npm i -g @oopsunome/fast-gitignore
+
+# 使用 Yarn
+$ yarn global add @oopsunome/fast-gitignore
 ```
 
 ## 参与开发
