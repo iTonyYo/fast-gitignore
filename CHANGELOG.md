@@ -1,5 +1,10 @@
 # [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 更新日志
 
+## [v1.0.2](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.1...v1.0.2) - 2019-01-23
+
+#### 提交
+
+- [[`1476b46`](https://github.com/iTonyYo/fast-gitignore/commit/1476b468d37200acb2c9d61caaf9f5b262a59710)] 文档: :memo: 更新 README.md
 ## [v1.0.1](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.0...v1.0.1) - 2019-01-23
 
 #### 提交
