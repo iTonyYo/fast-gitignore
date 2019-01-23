@@ -250,6 +250,7 @@
 "widest-line@2.0.1","MIT","https://github.com/sindresorhus/widest-line"
 "wrap-ansi@3.0.1","MIT","https://github.com/chalk/wrap-ansi"
 "write-file-atomic@2.3.0","ISC","https://github.com/iarna/write-file-atomic"
+"write-file-atomic@2.4.2","ISC","https://github.com/iarna/write-file-atomic"
 "xdg-basedir@3.0.0","MIT","https://github.com/sindresorhus/xdg-basedir"
 "yallist@2.1.2","ISC","https://github.com/isaacs/yallist"
 "yargs-parser@10.1.0","ISC","https://github.com/yargs/yargs-parser"
