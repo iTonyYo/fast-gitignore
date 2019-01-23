@@ -1,5 +1,10 @@
-# [`@oopsunome/manual-sort`](https://github.com/iTonyYo/manual-sort) 更新日志
+# [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 更新日志
 
+## [v1.0.1](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.0...v1.0.1) - 2019-01-23
+
+#### 提交
+
+- [[`08568c7`](https://github.com/iTonyYo/fast-gitignore/commit/08568c7fc410468e3fa103449bc5c8d2aebaf624)] 修复: :bug: 更新日志项目名错误
 ## v1.0.0 - 2019-01-23
 
 #### 提交
@@ -7,3 +12,5 @@
 - [[`01c5212`](https://github.com/iTonyYo/fast-gitignore/commit/01c5212d705ac86b87770d1fd6c7c7efde89dd41)] 新功能: :tada: 初步完成核心 `fastGitignore(ignores, to)`
 - [[`bcf8dff`](https://github.com/iTonyYo/fast-gitignore/commit/bcf8dffd43e8283ddafd9de009a3c3135e83cb1a)] 新功能: :tada: 支持在命令行中使用
 - [[`bb5d617`](https://github.com/iTonyYo/fast-gitignore/commit/bb5d617acb424fd421e9042779a0a1220dbbcf90)] 工程: :clapper: 配置更新日志
+
+[@oopsunome/fast-gitignore]: https://github.com/iTonyYo/fast-gitignore
