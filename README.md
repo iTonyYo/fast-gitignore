@@ -31,13 +31,13 @@ $ yarn add @oopsunome/fast-gitignore
 - `to` {String} `.gitignore` 文件存储位置
 - 返回: {Object}
   - `out` {String} 生成后的 `.gitignore` 所在位置
-  - `message` {String} 生成结果陈述
+  - `message` {String} 生成结果简述
 
 ```javascript
 import fastGitignore from '@oopsunome/fast-gitignore';
 
 (async () => {
-  const generated = fastGitignore(
+  console.log(await fastGitignore(
     [
       'macOS',
       'Windows',
@@ -51,12 +51,10 @@ import fastGitignore from '@oopsunome/fast-gitignore';
       'TortoiseGit',
     ],
     '.',
-  );
-
-  await generated;
+  ));
 
   /**
-   * inited:
+   * 输出:
    * 
    * {
    *   out: '/Users/username/git-project',
