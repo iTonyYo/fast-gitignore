@@ -1,5 +1,10 @@
 # [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 更新日志
 
+## [v1.0.4](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.3...v1.0.4) - 2019-01-23
+
+#### 提交
+
+- [[`0e10107`](https://github.com/iTonyYo/fast-gitignore/commit/0e10107118ddb7b2ca4af7180b59f19d3edda032)] 移除: :fire: 移除命令行化名 `fg`
 ## [v1.0.3](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.2...v1.0.3) - 2019-01-23
 
 #### 提交
