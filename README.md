@@ -8,6 +8,7 @@
 - [使用](#使用)
     - [`fastGitignore(ignores, to)`](#fastgitignoreignores-to)
     - [命令行](#命令行)
+- [相关](#相关)
 - [参与开发](#参与开发)
 - [贡献指南](#贡献指南)
 - [证书](#证书)
@@ -87,6 +88,9 @@ $ npm i -g @oopsunome/fast-gitignore
 $ yarn global add @oopsunome/fast-gitignore
 ```
 
+## 相关
+- [`@oopsunome/latest-gitignore`][@oopsunome/latest-gitignore] - 添加 / 更新 `.gitignore`。直接从 [`github/gitignore`](https://github.com/github/gitignore) 项目 `master` 分支获取数据，而非 [`gitignore.io`](https://www.gitignore.io/)。
+
 ## 参与开发
 
 **准备开发环境**
@@ -165,3 +169,4 @@ yarn test
 [@oopsunome/fast-gitignore]: https://github.com/iTonyYo/fast-gitignore
 [SETUP.md]: #
 [github/gitignore]: https://github.com/github/gitignore
+[@oopsunome/latest-gitignore]: https://github.com/iTonyYo/latest-gitignore
