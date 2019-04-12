@@ -16,6 +16,7 @@ import fastGitignore from './fastGitignore';
 
       选项
         --out, -o, '.gitignore' 文件存储位置，默认：'process.cwd()'
+        --version, -V, 查看版本号
 
       示例
         $ fast-gitignore macOS Windows Linux Node -o .
@@ -29,6 +30,10 @@ import fastGitignore from './fastGitignore';
           type: 'boolean',
           alias: 'h',
         },
+        version: {
+          type: 'boolean',
+          alias: 'V',
+        },
       },
     });
 
@@ -38,7 +43,7 @@ import fastGitignore from './fastGitignore';
     const { out } = flags;
 
     if (input.length === 0) {
-      throw Error('需被 Git 忽略的内容主题');
+      throw Error('必须提供需要被 Git 忽略的内容主题');
     }
 
     let $out = out;
