@@ -1,5 +1,10 @@
 # [`@oopsunome/fast-gitignore`](https://github.com/iTonyYo/fast-gitignore) 更新日志
 
+## [v1.0.7](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.6...v1.0.7) - 2019-04-13
+
+#### 提交
+
+- [[`ae378fc`](https://github.com/iTonyYo/fast-gitignore/commit/ae378fcf8f7bd517b6f24b733a3d40da2a0c3601)] 依赖: :package: 从 `github/gitignore` 同步最新模板
 ## [v1.0.6](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.5...v1.0.6) - 2019-04-12
 
 #### 提交
@@ -7,6 +12,7 @@
 - [[`e112a88`](https://github.com/iTonyYo/fast-gitignore/commit/e112a88f46697e8b5817b7f77ee33f038a2df587)] 依赖: :package: 升级依赖
 - [[`76d2ec5`](https://github.com/iTonyYo/fast-gitignore/commit/76d2ec57a0959eedef86a0fc171084c176364491)] 文档: :memo: 更新文档
 - [[`b707021`](https://github.com/iTonyYo/fast-gitignore/commit/b707021f88c449f087f2e75547d7da5a66ba0543)] 工作流: :railway_track: 更新 VS Code 编辑器配置
+- [[`f1d1435`](https://github.com/iTonyYo/fast-gitignore/commit/f1d143504802442350f219de7a0ef0e4668c49c3)] 发版: :bookmark: v1.0.6
 - [[`0ad9d81`](https://github.com/iTonyYo/fast-gitignore/commit/0ad9d817efb4b3a9872b6044686f323020380f05)] 功能: :gear: 支持传递 `-V` 参数获取版本号
 - [[`60908b4`](https://github.com/iTonyYo/fast-gitignore/commit/60908b412a0928c0b0baf730318b2022e790f7d4)] 工作流: :railway_track: 增加若干提交主题
 ## [v1.0.5](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.4...v1.0.5) - 2019-01-23
