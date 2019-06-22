@@ -33,6 +33,8 @@ const resolveRoot = relativePath => resolve(
     { concurrency: 8 },
   );
 
+  await execa('chmod', ['+x', resolveRoot('esm/cli.js')]);
+
   console.log(`
     ${chalk.greenBright('构建成功!')}
   `);
