@@ -1,10 +1,14 @@
 import trash from 'trash';
-import { resolveApp } from './paths';
+import { resolveCwd } from './paths';
 
-trash([
-  resolveApp('yarn-error.log'),
-  resolveApp('.nyc_output'),
-  resolveApp('coverage'),
-  resolveApp('licenses-development.csv '),
-  resolveApp('licenses-production.csv'),
-]);
+(async () => {
+  await trash([
+    resolveCwd('yarn-error.log'),
+    resolveCwd('.nyc_output'),
+    resolveCwd('coverage'),
+    resolveCwd('licenses-development.csv '),
+    resolveCwd('licenses-production.csv'),
+    resolveCwd('docs/licenses-development.csv '),
+    resolveCwd('docs/licenses-production.csv'),
+  ]);
+})();

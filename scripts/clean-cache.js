@@ -1,6 +1,8 @@
 import trash from 'trash';
-import { resolveApp } from './paths';
+import { resolveCwd } from './paths';
 
-trash([
-  resolveApp('.eslintcache'),
-]);
+(async () => {
+  await trash([
+    resolveCwd('.eslintcache'),
+  ]);
+})();

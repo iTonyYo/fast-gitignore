@@ -155,7 +155,7 @@
 "redent@3.0.0","MIT","https://github.com/sindresorhus/redent"
 "registry-auth-token@3.4.0","MIT","https://github.com/rexxars/registry-auth-token"
 "registry-url@5.1.0","MIT","https://github.com/sindresorhus/registry-url"
-"resolve@1.11.0","MIT","https://github.com/browserify/resolve"
+"resolve@1.11.1","MIT","https://github.com/browserify/resolve"
 "responselike@1.0.2","MIT","https://github.com/lukechilds/responselike"
 "restore-cursor@2.0.0","MIT","https://github.com/sindresorhus/restore-cursor"
 "reusify@1.0.4","MIT","https://github.com/mcollina/reusify"
