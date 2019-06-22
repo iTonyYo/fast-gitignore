@@ -1,10 +1,29 @@
 # [`@oopsunome/fast-gitignore`](https://github.com/iTonyYo/fast-gitignore) 更新日志
 
+## [v1.0.8](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.7...v1.0.8) - 2019-06-22
+
+### 混合
+
+- [[`#2`](https://github.com/iTonyYo/fast-gitignore/pull/2)] 文档: :memo: 更新问题模板
+
+#### 提交
+
+- [[`7cc107d`](https://github.com/iTonyYo/fast-gitignore/commit/7cc107d090a18035ea34106a1cf370df18a69b02)] 依赖: :package: 升级依赖
+- [[`7429281`](https://github.com/iTonyYo/fast-gitignore/commit/7429281e61a1d2d12a712a910b719b8280411af1)] 依赖: :package: 从 `github/gitignore` 同步最新模板
+- [[`61f5eee`](https://github.com/iTonyYo/fast-gitignore/commit/61f5eeebff22b16c376f8e231e082f48819e43cb)] 工作流: :railway_track: 迁移证书列表到 `./docs`
+- [[`0c63c2e`](https://github.com/iTonyYo/fast-gitignore/commit/0c63c2e2030a5f08273fa90fd03f29d30c2bf91b)] 文档: :memo: 更新问题模板
+- [[`68b71da`](https://github.com/iTonyYo/fast-gitignore/commit/68b71da636b9a1a008ff8effe45f92a0c0c2a26c)] 文档: :memo: 更新社区贡献相关文档
+- [[`f964075`](https://github.com/iTonyYo/fast-gitignore/commit/f964075799e9c125eea5ae1e519b2050ac713383)] 工作流: :railway_track: 构建后将 `./esm/cli.js` 转换为可执行文件
+- [[`c945564`](https://github.com/iTonyYo/fast-gitignore/commit/c945564be7406ea68531be23b09820f26f9f6300)] 工作流: :railway_track: 打开一份 Markdown 文档时，取消自动打开预览
+- [[`c3f1999`](https://github.com/iTonyYo/fast-gitignore/commit/c3f19996e9d0d4d116b491871d458a684db00561)] 文档: :memo: 更新问题模板
+- [[`eb6f166`](https://github.com/iTonyYo/fast-gitignore/commit/eb6f1665346a8e4ebd3cc53cb295405ef350fd3f)] 文档: :memo: 将社区贡献相关文档迁移至 `./.github` 目录下
+- [[`bafa11f`](https://github.com/iTonyYo/fast-gitignore/commit/bafa11f1e1c37a329eafc2ea1b5db97ad8bf745b)] Revert "文档: :memo: 更新问题模板"
 ## [v1.0.7](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.6...v1.0.7) - 2019-04-13
 
 #### 提交
 
 - [[`ae378fc`](https://github.com/iTonyYo/fast-gitignore/commit/ae378fcf8f7bd517b6f24b733a3d40da2a0c3601)] 依赖: :package: 从 `github/gitignore` 同步最新模板
+- [[`1709058`](https://github.com/iTonyYo/fast-gitignore/commit/170905841c0c4967a8575b3408cd5a9c73590cdd)] 发版: :bookmark: v1.0.7
 ## [v1.0.6](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.5...v1.0.6) - 2019-04-12
 
 #### 提交
