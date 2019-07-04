@@ -36,15 +36,14 @@
     "p-map": "^2.1.0",
     "redent": "^3.0.0",
     "update-notifier": "^3.0.1",
-    "write-file-atomic": "^3.0.0",
-    "snyk": "^1.189.0"
+    "write-file-atomic": "^3.0.0"
   },
   "private": false,
   "devDependencies": {
-    "@babel/cli": "^7.4.4",
-    "@babel/core": "^7.4.5",
-    "@babel/node": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
+    "@babel/cli": "^7.5.0",
+    "@babel/core": "^7.5.0",
+    "@babel/node": "^7.5.0",
+    "@babel/preset-env": "^7.5.0",
     "auto-changelog": "^1.13.0",
     "babel-eslint": "^10.0.2",
     "babel-plugin-add-module-exports": "^1.0.2",
@@ -54,7 +53,8 @@
     "execa": "^2.0.2",
     "license-checker": "^25.0.1",
     "make-dir": "^3.0.0",
-    "trash": "^6.0.0"
+    "trash": "^6.0.0",
+    "snyk": "^1.192.0"
   },
   "keywords": [
     "git",
