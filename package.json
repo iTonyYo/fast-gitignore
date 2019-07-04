@@ -37,7 +37,7 @@
     "redent": "^3.0.0",
     "update-notifier": "^3.0.1",
     "write-file-atomic": "^3.0.0",
-    "snyk": "^1.189.0"
+    "snyk": "^1.192.0"
   },
   "private": false,
   "devDependencies": {
