@@ -4,22 +4,22 @@
 
 ## 目录
 
-- [安装](#安装)
-- [使用](#使用)
-    - [`fastGitignore(ignores, to)`](#fastgitignoreignores-to)
-    - [命令行](#命令行)
+- [`fastGitignore(ignores, to)`](#fastGitignoreignores-to)
+- [命令行](#命令行)
 - [相关](#相关)
 - [参与开发](#参与开发)
 - [贡献指南](#贡献指南)
 - [证书](#证书)
-- [待办](#待办)
 
-## 为什么选择 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore]
+## `fastGitignore(ignores, to)`
 
-- [X] 支持通过配置文件自定义 [`github/gitignore`][github/gitignore] 模板，跨项目;
-- [X] 所有模板在安装 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 时就已经下载到本地，生成 `.gitignore` 文件非常快;
+- `ignores` {Array | String} 需被 Git 忽略的内容的主题
+- `to` {String} `.gitignore` 文件存储位置
+- 返回: {Object}
+  - `out` {String} 生成后的 `.gitignore` 所在位置
+  - `message` {String} 生成结果简述
 
-## 安装
+#### 安装
 
 ```shell
 # 使用 NPM
@@ -29,15 +29,7 @@ $ npm i @oopsunome/fast-gitignore
 $ yarn add @oopsunome/fast-gitignore
 ```
 
-## 使用
-
-#### `fastGitignore(ignores, to)`
-
-- `ignores` {Array | String} 需被 Git 忽略的内容的主题
-- `to` {String} `.gitignore` 文件存储位置
-- 返回: {Object}
-  - `out` {String} 生成后的 `.gitignore` 所在位置
-  - `message` {String} 生成结果简述
+#### 使用
 
 ```javascript
 import fastGitignore from '@oopsunome/fast-gitignore';
@@ -70,7 +62,14 @@ import fastGitignore from '@oopsunome/fast-gitignore';
 })();
 ```
 
-#### 命令行
+> `fastGitignore(ignores, to)` 接口不支持读取配置，仅命令行工具支持。
+
+## 命令行
+
+- [X] 支持通过配置文件自定义 [`github/gitignore`][github/gitignore] 模板，减少多项目下重复操作;
+- [X] 所有模板在安装 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 时就已经下载到本地，生成 `.gitignore` 文件非常快;
+
+#### 使用
 
 ```
 $ 使用方式
@@ -86,6 +85,8 @@ $ 使用方式
     $ fast-gitignore -o .                            已在配置中指定需要忽略的文件
 ```
 
+#### 安装
+
 在全局系统环境下使用的话，需要先全局安装 [@oopsunome/fast-gitignore][@oopsunome/fast-gitignore]，
 
 ```shell
@@ -95,6 +96,8 @@ $ npm i -g @oopsunome/fast-gitignore
 # 使用 Yarn
 $ yarn global add @oopsunome/fast-gitignore
 ```
+
+#### 配置
 
 默认情况下，[`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 会搜索以下文件中的 `gitignore` 属性：
 
@@ -131,9 +134,9 @@ $ yarn global add @oopsunome/fast-gitignore
 }
 ```
 
-**如果同时在配置文件、命令行中都指定了模板，[`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 会选择在命令行中声明的。**
+**如果同时在配置文件、命令行中都指定了模板，[`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 会选择在命令行中的声明。**
 
-> `fastGitignore(ignores, to)` 接口不支持读取配置，仅 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 命令行工具支持。
+> `fastGitignore(ignores, to)` 接口不支持读取配置，仅命令行工具支持。
 
 ## 相关
 - [`@oopsunome/latest-gitignore`][@oopsunome/latest-gitignore] - 添加 / 更新 `.gitignore`。直接从 [`github/gitignore`](https://github.com/github/gitignore) 项目 `master` 分支获取数据，而非 [`gitignore.io`](https://www.gitignore.io/)。
