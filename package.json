@@ -1,11 +1,13 @@
 {
+  "name": "@oopsunome/fast-gitignore",
+  "description": "添加 / 更新 `.gitignore`。内嵌 `@oopsunome/fast-gitignore` 维护但来自 `github/gitignore` 的模板。",
   "bin": {
-    "fast-gitignore": "esm/cli.js"
+    "fast-gitignore": "esm/main.js"
   },
   "main": "esm/fastGitignore.js",
   "scripts": {
     "start": "DEBUG=GITIGNORE:* npx babel-node ./dev",
-    "cli": "./esm/cli.js macOS Windows Linux Node VisualStudioCode SublimeText CVS Diff Vim TortoiseGit -o .",
+    "cli": "yarn build > /dev/null && ./esm/main.js -o .",
     "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/build",
     "clean": "npx babel-node ./scripts/clean",
     "license": "npx babel-node ./scripts/license",
@@ -23,11 +25,10 @@
     "esm/**/*.js",
     "templates/**/*.gitignore"
   ],
-  "name": "@oopsunome/fast-gitignore",
-  "description": "添加 / 更新 `.gitignore`。内嵌 `@oopsunome/fast-gitignore` 维护但来自 `github/gitignore` 的模板。",
   "dependencies": {
     "callsites": "^3.1.0",
     "chalk": "^2.4.2",
+    "cosmiconfig": "^5.2.1",
     "debug": "^4.1.1",
     "fast-glob": "^3.0.3",
     "listr": "^0.14.3",
@@ -39,6 +40,18 @@
     "write-file-atomic": "^3.0.0"
   },
   "private": false,
+  "gitignore": [
+    "macOS",
+    "Windows",
+    "Linux",
+    "Node",
+    "VisualStudioCode",
+    "SublimeText",
+    "CVS",
+    "Diff",
+    "Vim",
+    "TortoiseGit"
+  ],
   "devDependencies": {
     "@babel/cli": "^7.5.0",
     "@babel/core": "^7.5.0",
@@ -53,8 +66,8 @@
     "execa": "^2.0.2",
     "license-checker": "^25.0.1",
     "make-dir": "^3.0.0",
-    "trash": "^6.0.0",
-    "snyk": "^1.192.0"
+    "snyk": "^1.192.0",
+    "trash": "^6.0.0"
   },
   "keywords": [
     "git",

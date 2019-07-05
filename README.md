@@ -14,6 +14,11 @@
 - [证书](#证书)
 - [待办](#待办)
 
+## 为什么选择 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore]
+
+- [X] 支持通过配置文件自定义 [`github/gitignore`][github/gitignore] 模板，跨项目;
+- [X] 所有模板在安装 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 时就已经下载到本地，生成 `.gitignore` 文件非常快;
+
 ## 安装
 
 ```shell
@@ -56,7 +61,7 @@ import fastGitignore from '@oopsunome/fast-gitignore';
 
   /**
    * 输出:
-   * 
+   *
    * {
    *   out: '/Users/username/git-project',
    *   message: '成功添加 `.gitignore` 文件'
@@ -69,13 +74,16 @@ import fastGitignore from '@oopsunome/fast-gitignore';
 
 ```
 $ 使用方式
-    $ fast-gitignore <主题> <...> 选项 [...]
+  $ fast-gitignore [主题] [...] [选项] [...]
 
   选项
-    --out, -o, '.gitignore' 文件存储位置，默认：'process.cwd()'
+    --out, -o,                                       '.gitignore' 文件存储位置，默认：'process.cwd()'
+    --version, -V,                                   查看版本号
+    --help, -h                                       查看帮助
 
   示例
-    $ fast-gitignore macOS Windows Linux Node -o .
+    $ fast-gitignore macOS Windows Linux Node -o .   在命令行中指定需要忽略的文件
+    $ fast-gitignore -o .                            已在配置中指定需要忽略的文件
 ```
 
 在全局系统环境下使用的话，需要先全局安装 [@oopsunome/fast-gitignore][@oopsunome/fast-gitignore]，
@@ -87,6 +95,45 @@ $ npm i -g @oopsunome/fast-gitignore
 # 使用 Yarn
 $ yarn global add @oopsunome/fast-gitignore
 ```
+
+默认情况下，[`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 会搜索以下文件中的 `gitignore` 属性：
+
+- `package.json` 属性；
+- `JSON` 或者 `YAML` 等无后缀的 `rc` 文件；
+- 有后缀的 `rc` 文件，诸如：`.json`, `.yaml`, `.yml`, 或者 `.js`；
+- `.config.js` **CommonJS** 模块；
+
+例如：
+
+- `package.json` 文件中的 `gitignore` 属性
+- `JSON` 或者 `YAML` 格式的 `.gitignorerc` 文件
+- `.gitignorerc.json` 文件
+- `.gitignorerc.yaml`, `.gitignorerc.yml`, 或者 `.gitignorerc.js` 文件
+- 导出一个 JS 对象的 `gitignore.config.js` 文件
+
+[`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 从工作目录开始搜索配置，如果在根目录没有找到，会继续搜索子目录，直到找到有效的配置。
+
+配置示例：
+```
+{
+  "gitignore": [
+    "macOS",
+    "Windows",
+    "Linux",
+    "Node",
+    "VisualStudioCode",
+    "SublimeText",
+    "CVS",
+    "Diff",
+    "Vim",
+    "TortoiseGit"
+  ]
+}
+```
+
+**如果同时在配置文件、命令行中都指定了模板，[`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 会选择在命令行中声明的。**
+
+> `fastGitignore(ignores, to)` 接口不支持读取配置，仅 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 命令行工具支持。
 
 ## 相关
 - [`@oopsunome/latest-gitignore`][@oopsunome/latest-gitignore] - 添加 / 更新 `.gitignore`。直接从 [`github/gitignore`](https://github.com/github/gitignore) 项目 `master` 分支获取数据，而非 [`gitignore.io`](https://www.gitignore.io/)。
@@ -127,46 +174,9 @@ yarn test
 
 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 获得了 MIT 许可，仔细查阅 [LICENSE.md][证书] 以了解详情。
 
-## 待办
-
-- [X] 开发的时候使用 `ES 6/7`，支持构建 `ES 5` 模式的模块；
-- [ ] 功能测试；
-- [ ] 捆绑 [Git 倒钩][Git倒钩]；
-- [X] ESlint 检测；
-- [X] 生成所有依赖的开源证书；
-- [X] 更新日志；
-- [ ] 谁在使用 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore]?
-- [ ] 编写 [发布流程指南][发布流程指南]；
-- [ ] 编写 [Git 指南][Git指南]；
-- [ ] 编写 [命名指南][命名指南]；
-- [ ] 编写 [版本指南][版本指南]；
-- [ ] 完善 [贡献指南][贡献指南]；
-- [ ] 文档：[编码风格指南][编码风格指南]；
-- [ ] 使用 [David DM][DavidDM] 实现 `依赖是否最新` 检测；
-- [ ] 使用 [Travis CI][TravisCI] 实现持续集成；
-- [ ] 使用 [Coveralls][Coveralls] 可视化测试用例覆盖率；
-- [ ] 使用 [Codacy][Codacy] 实现代码质量检测；
-- [ ] 编写 [开发环境指南][SETUP.md]；
-- [ ] 在什么场景下使用 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore]?
-- [ ] 文档：在哪里可以获得更多帮助？
-- [ ] 文档：设计思想；
-- [ ] 文档：维护策略；
-- [ ] 性能测试；
-
-[编码风格指南]: #
-[版本指南]: #
-[命名指南]: #
-[Git指南]: #
-[发布流程指南]: #
-[Git倒钩]: https://github.com/typicode/husky
-[DavidDM]: https://david-dm.org/
-[TravisCI]: https://travis-ci.org/
-[Coveralls]: https://coveralls.io/
-[Codacy]: https://www.codacy.com/
 [贡献指南]: https://github.com/iTonyYo/fast-gitignore/blob/master/CONTRIBUTING.md
 [证书]: https://github.com/iTonyYo/fast-gitignore/blob/master/LICENSE.md
-[Node]: https://nodejs.org/
-[@oopsunome/fast-gitignore]: https://github.com/iTonyYo/fast-gitignore
 [SETUP.md]: #
 [github/gitignore]: https://github.com/github/gitignore
+[@oopsunome/fast-gitignore]: https://github.com/iTonyYo/fast-gitignore
 [@oopsunome/latest-gitignore]: https://github.com/iTonyYo/latest-gitignore
