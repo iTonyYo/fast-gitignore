@@ -1,5 +1,16 @@
 # [`@oopsunome/fast-gitignore`](https://github.com/iTonyYo/fast-gitignore) 更新日志
 
+## [v1.0.9](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.8...v1.0.9) - 2019-07-05
+
+#### 提交
+
+- [[`a7a5107`](https://github.com/iTonyYo/fast-gitignore/commit/a7a51071f6e7ff493dd411208eb95904edee222f)] 依赖: :package: 更新 `yarn.lock` 以及依赖证书报告
+- [[`8758e65`](https://github.com/iTonyYo/fast-gitignore/commit/8758e65d9766754305b60365a54fa6203c1c6ccc)] 功能: :gear: 支持读取配置文件 #4
+- [[`b02ee2d`](https://github.com/iTonyYo/fast-gitignore/commit/b02ee2d1f7eb6df05ccf432d70dcc89b7590ac76)] 依赖: :package: 升级若干依赖
+- [[`47a3153`](https://github.com/iTonyYo/fast-gitignore/commit/47a3153e360221536258ddba0bf68eaa45a35e6d)] 依赖: :package: 更新依赖
+- [[`46e060a`](https://github.com/iTonyYo/fast-gitignore/commit/46e060aafa0e87d039e4dbc64aee02ec47eace1d)] 文档: :memo: 更新 README.md
+- [[`6a9fe84`](https://github.com/iTonyYo/fast-gitignore/commit/6a9fe849fb60006e1f3a6df909f1644f096dc295)] 补丁: :ambulance: [Snyk] 修复一个易受攻击的依赖
+- [[`d9b47b8`](https://github.com/iTonyYo/fast-gitignore/commit/d9b47b81c7fe48037131b84e0f884545dffc387f)] 依赖: :package: fast-glob v3.0.1 -> v3.0.3, update-notifier v3.0.0 -> v3.0.1
 ## [v1.0.8](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.7...v1.0.8) - 2019-06-22
 
 ### 混合
@@ -13,6 +24,7 @@
 - [[`61f5eee`](https://github.com/iTonyYo/fast-gitignore/commit/61f5eeebff22b16c376f8e231e082f48819e43cb)] 工作流: :railway_track: 迁移证书列表到 `./docs`
 - [[`0c63c2e`](https://github.com/iTonyYo/fast-gitignore/commit/0c63c2e2030a5f08273fa90fd03f29d30c2bf91b)] 文档: :memo: 更新问题模板
 - [[`68b71da`](https://github.com/iTonyYo/fast-gitignore/commit/68b71da636b9a1a008ff8effe45f92a0c0c2a26c)] 文档: :memo: 更新社区贡献相关文档
+- [[`b11d946`](https://github.com/iTonyYo/fast-gitignore/commit/b11d946bae1bfee7b9b80bb8415d80f61e6a1f75)] 发版: :bookmark: v1.0.8
 - [[`f964075`](https://github.com/iTonyYo/fast-gitignore/commit/f964075799e9c125eea5ae1e519b2050ac713383)] 工作流: :railway_track: 构建后将 `./esm/cli.js` 转换为可执行文件
 - [[`c945564`](https://github.com/iTonyYo/fast-gitignore/commit/c945564be7406ea68531be23b09820f26f9f6300)] 工作流: :railway_track: 打开一份 Markdown 文档时，取消自动打开预览
 - [[`c3f1999`](https://github.com/iTonyYo/fast-gitignore/commit/c3f19996e9d0d4d116b491871d458a684db00561)] 文档: :memo: 更新问题模板
