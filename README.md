@@ -4,8 +4,13 @@
 
 ## 目录
 
-- [`fastGitignore(ignores, to)`](#fastGitignoreignores-to)
+- [`fastGitignore(ignores, to)`](#fastgitignoreignores-to)
+    - [安装](#安装)
+    - [使用](#使用)
 - [命令行](#命令行)
+    - [安装](#安装-1)
+    - [使用](#使用-1)
+    - [配置](#配置)
 - [相关](#相关)
 - [参与开发](#参与开发)
 - [贡献指南](#贡献指南)
@@ -69,6 +74,18 @@ import fastGitignore from '@oopsunome/fast-gitignore';
 - [X] 支持通过配置文件自定义 [`github/gitignore`][github/gitignore] 模板，减少多项目下重复操作;
 - [X] 所有模板在安装 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 时就已经下载到本地，生成 `.gitignore` 文件非常快;
 
+#### 安装
+
+在全局系统环境下使用的话，需要先全局安装 [@oopsunome/fast-gitignore][@oopsunome/fast-gitignore]，
+
+```shell
+# 使用 NPM
+$ npm i -g @oopsunome/fast-gitignore
+
+# 使用 Yarn
+$ yarn global add @oopsunome/fast-gitignore
+```
+
 #### 使用
 
 ```
@@ -83,18 +100,6 @@ $ 使用方式
   示例
     $ fast-gitignore macOS Windows Linux Node -o .   在命令行中指定需要忽略的文件
     $ fast-gitignore -o .                            已在配置中指定需要忽略的文件
-```
-
-#### 安装
-
-在全局系统环境下使用的话，需要先全局安装 [@oopsunome/fast-gitignore][@oopsunome/fast-gitignore]，
-
-```shell
-# 使用 NPM
-$ npm i -g @oopsunome/fast-gitignore
-
-# 使用 Yarn
-$ yarn global add @oopsunome/fast-gitignore
 ```
 
 #### 配置
