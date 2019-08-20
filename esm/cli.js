@@ -65,7 +65,7 @@ class Cli {
   }
 
   async run() {
-    const rslt = await (0, _fastGitignore.default)(this.getSelectedTemplatesName(), this.getDest());
+    const rslt = await (0, _fastGitignore.default)(this.getSelectedTemplatesByName(), this.getDest());
     console.log((0, _redent.default)(_chalk.default`
       {green.bold ${rslt.message}}
       {grey ${rslt.out}}
@@ -73,7 +73,7 @@ class Cli {
   } // 待办： 是否提示 "必须提供需要被 Git 忽略的内容主题"
 
 
-  getSelectedTemplatesName() {
+  getSelectedTemplatesByName() {
     const {
       input
     } = this.cli;
