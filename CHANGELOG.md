@@ -1,5 +1,16 @@
 # [`@oopsunome/fast-gitignore`](https://github.com/iTonyYo/fast-gitignore) 更新日志
 
+## [v1.1.0](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.9...v1.1.0) - 2019-08-20
+
+#### 提交
+
+- [[`46e4303`](https://github.com/iTonyYo/fast-gitignore/commit/46e43038469d6f163ef5c36f34ae57f4218ef2fd)] 依赖: :package: 升级依赖
+- [[`91a5f2f`](https://github.com/iTonyYo/fast-gitignore/commit/91a5f2fca3453a01294d85fd99491e1767a7ddc3)] 文档: :memo: 从 `github/gitignore` 同步最新模板
+- [[`05f04ad`](https://github.com/iTonyYo/fast-gitignore/commit/05f04adf082ca149656b0f3f51a70fc01a055f87)] 依赖: :package: fast-glob v3.0.3 -> v3.0.4
+- [[`425bf20`](https://github.com/iTonyYo/fast-gitignore/commit/425bf2011441eb6625cc91507b1293b2c8df28d6)] 文档: :memo: 更新文档
+- [[`acd0b36`](https://github.com/iTonyYo/fast-gitignore/commit/acd0b36105d6c7f7020d0bf92e6e7de905d51232)] 配置: :wrench: 新增 `Code Climate` 配置
+- [[`d34224d`](https://github.com/iTonyYo/fast-gitignore/commit/d34224ddbb167eb2ee0eb2aa29721266afbe9ea8)] 配置: :wrench: 更新 `changelog-template.hbs`
+- [[`1a22406`](https://github.com/iTonyYo/fast-gitignore/commit/1a2240661132faeecb89b65fa1f3a5816e78c051)] 格式: :art: 将 Node.js 模块与第三方模块间隔开
 ## [v1.0.9](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.8...v1.0.9) - 2019-07-05
 
 #### 提交
@@ -9,6 +20,7 @@
 - [[`b02ee2d`](https://github.com/iTonyYo/fast-gitignore/commit/b02ee2d1f7eb6df05ccf432d70dcc89b7590ac76)] 依赖: :package: 升级若干依赖
 - [[`47a3153`](https://github.com/iTonyYo/fast-gitignore/commit/47a3153e360221536258ddba0bf68eaa45a35e6d)] 依赖: :package: 更新依赖
 - [[`46e060a`](https://github.com/iTonyYo/fast-gitignore/commit/46e060aafa0e87d039e4dbc64aee02ec47eace1d)] 文档: :memo: 更新 README.md
+- [[`840d0a9`](https://github.com/iTonyYo/fast-gitignore/commit/840d0a99deab22d69bcabd5dd313ac6dc99460b9)] 发版: :bookmark: v1.0.9
 - [[`6a9fe84`](https://github.com/iTonyYo/fast-gitignore/commit/6a9fe849fb60006e1f3a6df909f1644f096dc295)] 补丁: :ambulance: [Snyk] 修复一个易受攻击的依赖
 - [[`d9b47b8`](https://github.com/iTonyYo/fast-gitignore/commit/d9b47b81c7fe48037131b84e0f884545dffc387f)] 依赖: :package: fast-glob v3.0.1 -> v3.0.3, update-notifier v3.0.0 -> v3.0.1
 ## [v1.0.8](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.7...v1.0.8) - 2019-06-22
@@ -21,6 +33,7 @@
 
 - [[`7cc107d`](https://github.com/iTonyYo/fast-gitignore/commit/7cc107d090a18035ea34106a1cf370df18a69b02)] 依赖: :package: 升级依赖
 - [[`7429281`](https://github.com/iTonyYo/fast-gitignore/commit/7429281e61a1d2d12a712a910b719b8280411af1)] 依赖: :package: 从 `github/gitignore` 同步最新模板
+- [[`2ef21f4`](https://github.com/iTonyYo/fast-gitignore/commit/2ef21f424f8226aab373009033082cc7cfb7db55)] 配置: :wrench: 直接在 `package.json` 文件中配置 `babel`、`eslint`、`auto-changelog`
 - [[`61f5eee`](https://github.com/iTonyYo/fast-gitignore/commit/61f5eeebff22b16c376f8e231e082f48819e43cb)] 工作流: :railway_track: 迁移证书列表到 `./docs`
 - [[`0c63c2e`](https://github.com/iTonyYo/fast-gitignore/commit/0c63c2e2030a5f08273fa90fd03f29d30c2bf91b)] 文档: :memo: 更新问题模板
 - [[`68b71da`](https://github.com/iTonyYo/fast-gitignore/commit/68b71da636b9a1a008ff8effe45f92a0c0c2a26c)] 文档: :memo: 更新社区贡献相关文档
