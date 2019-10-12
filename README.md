@@ -1,3 +1,5 @@
+[![Package Quality](https://npm.packagequality.com/shield/@oopsunome%2Ffast-gitignore.svg)](https://packagequality.com/#?package=@oopsunome/fast-gitignore)
+
 # `@oopsunome/fast-gitignore`
 
 添加 / 更新 `.gitignore`。内嵌 [`@oopsunome/fast-gitignore`][@oopsunome/fast-gitignore] 维护但来自 [`github/gitignore`][github/gitignore] 的模板。
