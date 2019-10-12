@@ -1,18 +1,26 @@
 # [`@oopsunome/fast-gitignore`](https://github.com/iTonyYo/fast-gitignore) 更新日志
 
+## [v1.1.1](https://github.com/iTonyYo/fast-gitignore/compare/v1.1.0...v1.1.1) - 2019-10-12
+
+#### 提交
+
+- [[`6aa9c27`](https://github.com/iTonyYo/fast-gitignore/commit/6aa9c277062f4d640b66dd18dab65dc682c5bbbd)] 依赖: :arrow_up: 升级依赖
+- [[`a980c86`](https://github.com/iTonyYo/fast-gitignore/commit/a980c86c55ecbbbec167b5305103e38f4a8d0a76)] 依赖: :arrow_up: 升级依赖
+- [[`c660bb7`](https://github.com/iTonyYo/fast-gitignore/commit/c660bb7f80aa6026415d802f5b171da7f9f0a52b)] 文档: :memo: 从 `github/gitignore` 同步最新模板
+- [[`d2c2d2d`](https://github.com/iTonyYo/fast-gitignore/commit/d2c2d2d6a47382e575ad3525353924ce342c3a84)] 体验: :children_crossing: 减小包体积，提升包下载效率
+- [[`8ee94b2`](https://github.com/iTonyYo/fast-gitignore/commit/8ee94b2b9886845acaa8653810fc4061eb1a7055)] 配置: :wrench: 更新 `.gitignore`
+- [[`229eab0`](https://github.com/iTonyYo/fast-gitignore/commit/229eab04428a3f19c7d3b012b1a47606f4fe1a84)] 文档: :memo: 新增 `重构: :recycle:` Git 提交主题
+- [[`559cfc2`](https://github.com/iTonyYo/fast-gitignore/commit/559cfc20f5acd1a55ee9bf68b36d8c1d4281a0b9)] 文档: :memo: 添加 `配置: :wrench:` 提交主题
+- [[`8dfa906`](https://github.com/iTonyYo/fast-gitignore/commit/8dfa90678b72569f16784a63b9d102c2622f4a91)] 文档: :memo: 添加包质量徽章图片资源
 ## [v1.1.0](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.9...v1.1.0) - 2019-08-20
 
 #### 提交
 
 - [[`46e4303`](https://github.com/iTonyYo/fast-gitignore/commit/46e43038469d6f163ef5c36f34ae57f4218ef2fd)] 依赖: :package: 升级依赖
-- [[`6aa9c27`](https://github.com/iTonyYo/fast-gitignore/commit/6aa9c277062f4d640b66dd18dab65dc682c5bbbd)] 依赖: :arrow_up: 升级依赖
-- [[`a980c86`](https://github.com/iTonyYo/fast-gitignore/commit/a980c86c55ecbbbec167b5305103e38f4a8d0a76)] 依赖: :arrow_up: 升级依赖
 - [[`91a5f2f`](https://github.com/iTonyYo/fast-gitignore/commit/91a5f2fca3453a01294d85fd99491e1767a7ddc3)] 文档: :memo: 从 `github/gitignore` 同步最新模板
-- [[`c660bb7`](https://github.com/iTonyYo/fast-gitignore/commit/c660bb7f80aa6026415d802f5b171da7f9f0a52b)] 文档: :memo: 从 `github/gitignore` 同步最新模板
 - [[`05f04ad`](https://github.com/iTonyYo/fast-gitignore/commit/05f04adf082ca149656b0f3f51a70fc01a055f87)] 依赖: :package: fast-glob v3.0.3 -&gt; v3.0.4
 - [[`425bf20`](https://github.com/iTonyYo/fast-gitignore/commit/425bf2011441eb6625cc91507b1293b2c8df28d6)] 文档: :memo: 更新文档
 - [[`acd0b36`](https://github.com/iTonyYo/fast-gitignore/commit/acd0b36105d6c7f7020d0bf92e6e7de905d51232)] 配置: :wrench: 新增 `Code Climate` 配置
-- [[`229eab0`](https://github.com/iTonyYo/fast-gitignore/commit/229eab04428a3f19c7d3b012b1a47606f4fe1a84)] 文档: :memo: 新增 `重构: :recycle:` Git 提交主题
 - [[`d34224d`](https://github.com/iTonyYo/fast-gitignore/commit/d34224ddbb167eb2ee0eb2aa29721266afbe9ea8)] 配置: :wrench: 更新 `changelog-template.hbs`
 - [[`1a22406`](https://github.com/iTonyYo/fast-gitignore/commit/1a2240661132faeecb89b65fa1f3a5816e78c051)] 格式: :art: 将 Node.js 模块与第三方模块间隔开
 ## [v1.0.9](https://github.com/iTonyYo/fast-gitignore/compare/v1.0.8...v1.0.9) - 2019-07-05
