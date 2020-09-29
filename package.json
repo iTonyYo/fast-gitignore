@@ -6,8 +6,8 @@
   },
   "main": "esm/fastGitignore.js",
   "scripts": {
-    "start": "DEBUG=GITIGNORE:* npx babel-node ./dev",
-    "cli": "yarn build > /dev/null && ./esm/main.js -o .",
+    "start": "yarn build > /dev/null && ./esm/main.js -o .",
+    "dev": "DEBUG=GITIGNORE:* npx babel-node ./dev",
     "build": "npx babel-node ./scripts/clean-built && npx babel-node ./scripts/build",
     "clean": "npx babel-node ./scripts/clean",
     "license": "npx babel-node ./scripts/license",
@@ -120,7 +120,8 @@
     ],
     "parser": "babel-eslint",
     "rules": {
-      "no-console": 0
+      "no-console": 0,
+      "implicit-arrow-linebreak": 0
     }
   },
   "babel": {
