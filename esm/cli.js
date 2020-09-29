@@ -13,7 +13,7 @@ var _chalk = _interopRequireDefault(require("chalk"));
 
 var _redent = _interopRequireDefault(require("redent"));
 
-var _cosmiconfig = _interopRequireDefault(require("cosmiconfig"));
+var _cosmiconfig = require("cosmiconfig");
 
 var _package = _interopRequireDefault(require("../package.json"));
 
@@ -33,18 +33,18 @@ class Cli {
       pkg: _package.default
     }).notify();
     this.cli = (0, _meow.default)(`
-      使用方式
-        $ fast-gitignore [主题] [...] [选项] [...]
+        使用方式
+          $ fast-gitignore [主题] [...] [选项] [...]
 
-      选项
-        --out, -o,                                       '.gitignore' 文件存储位置，默认：'process.cwd()'
-        --version, -V,                                   查看版本号
-        --help, -h                                       查看帮助
+        选项
+          --out, -o,                                       '.gitignore' 文件存储位置，默认：'process.cwd()'
+          --version, -V,                                   查看版本号
+          --help, -h                                       查看帮助
 
-      示例
-        $ fast-gitignore macOS Windows Linux Node -o .   在命令行中指定需要忽略的文件
-        $ fast-gitignore -o .                            已在配置中指定需要忽略的文件
-    `, {
+        示例
+          $ fast-gitignore macOS Windows Linux Node -o .   在命令行中指定需要忽略的文件
+          $ fast-gitignore -o .                            已在配置中指定需要忽略的文件
+      `, {
       flags: {
         out: {
           type: 'string',
@@ -66,10 +66,10 @@ class Cli {
 
   async run() {
     const rslt = await (0, _fastGitignore.default)(this.getSelectedTemplatesByName(), this.getDest());
-    console.log((0, _redent.default)(_chalk.default`
-      {green.bold ${rslt.message}}
-      {grey ${rslt.out}}
-    `, 2));
+    console.log((0, _redent.default)((0, _chalk.default)`
+          {green.bold ${rslt.message}}
+          {grey ${rslt.out}}
+        `, 2));
   } // 待办： 是否提示 "必须提供需要被 Git 忽略的内容主题"
 
 
@@ -101,8 +101,8 @@ class Cli {
   }
 
   getUserDefinedConfig() {
-    const explorer = (0, _cosmiconfig.default)('gitignore');
-    const foundConfig = explorer.searchSync(this.workingPath);
+    const explorer = (0, _cosmiconfig.cosmiconfigSync)('gitignore');
+    const foundConfig = explorer.search(this.workingPath);
     return (0, _isEmpty.default)(foundConfig) ? {} : (0, _get.default)(foundConfig, 'config');
   }
 

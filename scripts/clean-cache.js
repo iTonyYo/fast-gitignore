@@ -2,7 +2,5 @@ import trash from 'trash';
 import { resolveCwd } from './paths';
 
 (async () => {
-  await trash([
-    resolveCwd('.eslintcache'),
-  ]);
+  await trash([resolveCwd('.eslintcache')]);
 })();

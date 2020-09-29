@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-'use strict';
 
 import { join } from 'path';
 import licenseChecker from 'license-checker';
@@ -18,28 +17,28 @@ import { appDirectory, docs } from './paths';
  * @params {String} to - 保存的位置
  * @params {String} fileName - 报告文件名称
  */
-const saveCSV  = ({csv, to, fileName}) => {
+const saveCSV = ({ csv, to, fileName }) => {
   makeDir(to)
-    .then(path => {
-        writeFileAtomic(
-          join(to, fileName),
-          `${licenseChecker.asCSV(csv)}\n`,
-          {},
-          (err) => {
-            if (!err) {
-              console.log(`
+    .then((path) => {
+      writeFileAtomic(
+        join(to, fileName),
+        `${licenseChecker.asCSV(csv)}\n`,
+        {},
+        (err) => {
+          if (!err) {
+            console.log(`
                 ${chalk.green.bold(`${fileName}`)}
                 ${chalk.dim('保存在: ') + chalk.blueBright(path)}
               `);
 
-              return;
-            }
-
-            throw err;
+            return;
           }
-        );
-      })
-    .catch(err => {
+
+          throw err;
+        },
+      );
+    })
+    .catch((err) => {
       throw err;
     });
 };
@@ -47,37 +46,43 @@ const saveCSV  = ({csv, to, fileName}) => {
 /**
  * 生成 package.json 文件中 "dependencies" 依赖证书报告
  */
-licenseChecker.init({
-  start:       appDirectory,
-  production:  false,
-  development: true,
-}, (err, data) => {
-  if (err) {
-    throw err;
-  } else {
-    saveCSV({
-      csv     : data,
-      to      : docs,
-      fileName: 'licenses-development.csv',
-    });
-  }
-});
+licenseChecker.init(
+  {
+    start: appDirectory,
+    production: false,
+    development: true,
+  },
+  (err, data) => {
+    if (err) {
+      throw err;
+    } else {
+      saveCSV({
+        csv: data,
+        to: docs,
+        fileName: 'licenses-development.csv',
+      });
+    }
+  },
+);
 
 /**
  * 生成 package.json 文件中 "devDependencies" 依赖证书报告
  */
-licenseChecker.init({
-  start:       appDirectory,
-  production:  true,
-  development: false,
-}, (err, data) => {
-  if (err) {
-    throw err;
-  } else {
-    saveCSV({
-      csv     : data,
-      to      : docs,
-      fileName: 'licenses-production.csv',
-    });
-  }
-});
+licenseChecker.init(
+  {
+    start: appDirectory,
+    production: true,
+    development: false,
+  },
+  (err, data) => {
+    if (err) {
+      throw err;
+    } else {
+      saveCSV({
+        csv: data,
+        to: docs,
+        fileName: 'licenses-production.csv',
+      });
+    }
+  },
+);

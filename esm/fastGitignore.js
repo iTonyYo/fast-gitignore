@@ -18,19 +18,15 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
  * @param {String} to - `.gitignore` 文件存储位置
  */
 const fastGitignore = async (ignores, to) => {
-  try {
-    if (!(await (0, _dirExists.default)(to))) {
-      throw Error('保存位置必须有效');
-    }
-
-    await (0, _generateGitignore.default)(ignores, to);
-    return {
-      message: '成功添加 `.gitignore` 文件',
-      out: (0, _fs.realpathSync)(to)
-    };
-  } catch (err) {
-    throw err;
+  if (!(await (0, _dirExists.default)(to))) {
+    throw Error('保存位置必须有效');
   }
+
+  await (0, _generateGitignore.default)(ignores, to);
+  return {
+    message: '成功添加 `.gitignore` 文件',
+    out: (0, _fs.realpathSync)(to)
+  };
 };
 
 var _default = fastGitignore;

@@ -12,8 +12,9 @@
     "clean": "npx babel-node ./scripts/clean",
     "license": "npx babel-node ./scripts/license",
     "reprepare": "npx babel-node ./scripts/re-prepare",
-    "lint": "npx eslint --cache ./src/**/*.js",
     "changelog": "npx auto-changelog -p",
+    "lint": "npx eslint --cache './src/**/*.js'",
+    "format": "npx babel-node ./scripts/format",
     "snyk-protect": "snyk protect",
     "prepublish": "npm run snyk-protect"
   },
@@ -59,6 +60,7 @@
     "babel-plugin-add-module-exports": "^1.0.4",
     "eslint": "^7.10.0",
     "eslint-config-airbnb-base": "^14.2.0",
+    "eslint-config-prettier": "^6.12.0",
     "eslint-plugin-import": "^2.22.1",
     "execa": "^4.0.3",
     "license-checker": "^25.0.1",
@@ -102,7 +104,6 @@
     "esm/**",
     ".github/**",
     ".vscode/**",
-    "scripts/**",
     "coverage/**"
   ],
   "eslintConfig": {
@@ -116,12 +117,24 @@
       "module": true
     },
     "extends": [
-      "airbnb-base"
+      "airbnb-base",
+      "plugin:import/errors",
+      "prettier"
+    ],
+    "plugins": [
+      "import"
     ],
     "parser": "babel-eslint",
     "rules": {
       "no-console": 0,
-      "implicit-arrow-linebreak": 0
+      "import/no-extraneous-dependencies": [
+        "error",
+        {
+          "devDependencies": [
+            "./scripts/**/*.js"
+          ]
+        }
+      ]
     }
   },
   "babel": {

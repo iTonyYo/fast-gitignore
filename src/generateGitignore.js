@@ -16,53 +16,45 @@ import saveFile from './saveFile';
 import resolveRoot from './resolveRoot';
 
 const generateGitignore = async (ignores, to) => {
-  try {
-    let glob;
+  let glob;
 
-    if (isArray(ignores)) {
-      glob = `{${join(ignores, ',')}}`;
-    }
+  if (isArray(ignores)) {
+    glob = `{${join(ignores, ',')}}`;
+  }
 
-    if (isArray(ignores) && isEqual(size(ignores), 1)) {
-      const [topic] = ignores;
-      glob = topic;
-    }
+  if (isArray(ignores) && isEqual(size(ignores), 1)) {
+    const [topic] = ignores;
+    glob = topic;
+  }
 
-    if (isString(ignores)) {
-      glob = ignores;
-    }
+  if (isString(ignores)) {
+    glob = ignores;
+  }
 
-    if ((!isArray(ignores) && !isString(ignores)) || isEmpty(ignores)) {
-      throw Error('必须提供内容主题');
-    }
+  if ((!isArray(ignores) && !isString(ignores)) || isEmpty(ignores)) {
+    throw Error('必须提供内容主题');
+  }
 
-    const tplPaths = await fg(
-      [
-        path.join(
-          path.join(
-            callsites()[0].getFileName(),
-            '/../..',
-          ),
-          `templates/${glob}.gitignore`,
-        ),
-      ],
-    );
+  const tplPaths = await fg([
+    path.join(
+      path.join(callsites()[0].getFileName(), '/../..'),
+      `templates/${glob}.gitignore`,
+    ),
+  ]);
 
-    const tplData = join(
-      await pMap(tplPaths, async (filePath) => {
+  const tplData = join(
+    await pMap(
+      tplPaths,
+      async (filePath) => {
         const content = await promisify(readFile)(filePath, 'utf8');
         return content;
-      }, { concurrency: 8 }),
-      '\n\n\n',
-    );
+      },
+      { concurrency: 8 },
+    ),
+    '\n\n\n',
+  );
 
-    await saveFile(
-      tplData,
-      resolveRoot('.gitignore', to),
-    );
-  } catch (error) {
-    throw error;
-  }
+  await saveFile(tplData, resolveRoot('.gitignore', to));
 };
 
 export default generateGitignore;

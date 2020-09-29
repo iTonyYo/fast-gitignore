@@ -2,7 +2,7 @@ import meow from 'meow';
 import updateNotifier from 'update-notifier';
 import chalk from 'chalk';
 import redent from 'redent';
-import cosmiconfig from 'cosmiconfig';
+import { cosmiconfigSync } from 'cosmiconfig';
 
 import pkg from '../package.json';
 import isEmpty from './utilities/isEmpty';
@@ -14,34 +14,37 @@ class Cli {
   constructor() {
     updateNotifier({ pkg }).notify();
 
-    this.cli = meow(`
-      使用方式
-        $ fast-gitignore [主题] [...] [选项] [...]
+    this.cli = meow(
+      `
+        使用方式
+          $ fast-gitignore [主题] [...] [选项] [...]
 
-      选项
-        --out, -o,                                       '.gitignore' 文件存储位置，默认：'process.cwd()'
-        --version, -V,                                   查看版本号
-        --help, -h                                       查看帮助
+        选项
+          --out, -o,                                       '.gitignore' 文件存储位置，默认：'process.cwd()'
+          --version, -V,                                   查看版本号
+          --help, -h                                       查看帮助
 
-      示例
-        $ fast-gitignore macOS Windows Linux Node -o .   在命令行中指定需要忽略的文件
-        $ fast-gitignore -o .                            已在配置中指定需要忽略的文件
-    `, {
-      flags: {
-        out: {
-          type: 'string',
-          alias: 'o',
-        },
-        help: {
-          type: 'boolean',
-          alias: 'h',
-        },
-        version: {
-          type: 'boolean',
-          alias: 'V',
+        示例
+          $ fast-gitignore macOS Windows Linux Node -o .   在命令行中指定需要忽略的文件
+          $ fast-gitignore -o .                            已在配置中指定需要忽略的文件
+      `,
+      {
+        flags: {
+          out: {
+            type: 'string',
+            alias: 'o',
+          },
+          help: {
+            type: 'boolean',
+            alias: 'h',
+          },
+          version: {
+            type: 'boolean',
+            alias: 'V',
+          },
         },
       },
-    });
+    );
 
     this.workingPath = getWorkingDirectory(this.cli.input[0]).twd;
     this.userDefinedConfig = this.getUserDefinedConfig();
@@ -53,10 +56,15 @@ class Cli {
       this.getDest(),
     );
 
-    console.log(redent(chalk`
-      {green.bold ${rslt.message}}
-      {grey ${rslt.out}}
-    `, 2));
+    console.log(
+      redent(
+        chalk`
+          {green.bold ${rslt.message}}
+          {grey ${rslt.out}}
+        `,
+        2,
+      ),
+    );
   }
 
   // 待办： 是否提示 "必须提供需要被 Git 忽略的内容主题"
@@ -82,8 +90,8 @@ class Cli {
   }
 
   getUserDefinedConfig() {
-    const explorer = cosmiconfig('gitignore');
-    const foundConfig = explorer.searchSync(this.workingPath);
+    const explorer = cosmiconfigSync('gitignore');
+    const foundConfig = explorer.search(this.workingPath);
 
     return isEmpty(foundConfig) ? {} : get(foundConfig, 'config');
   }
