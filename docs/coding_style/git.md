@@ -15,6 +15,7 @@
 使用 Github 托管私有项目。
 
 ## 配置
+
 参见 [Better Git configuration](https://blog.scottnonnenberg.com/better-git-configuration/)。
 
 ## 命名
@@ -34,11 +35,13 @@
 根据 [约定式提交 1.0.0-beta.2 公约](https://www.conventionalcommits.org/zh/v1.0.0-beta.2/) 、[Git 表情公约](https://gitmoji.carloscuesta.me/) 改编。提交信息应该清晰描述修改了什么以及其原因。
 
 **概述**
+
 - 概述修改了什么
 - 少于 25 个汉字
 - 可以的话精确指向到某个函数名等
 
 **补充描述**
+
 - 更详细地解释修改的原因
 - 保持列款短于 72 字左右
 - 分段
@@ -60,6 +63,7 @@ git commit -m '新功能: :tada: 一个新功能' -m '初始提交首页'
 > 标签应避免特指某个系统、工具、平台等。
 
 **功能**
+
 ```shell
 # 增 / 删 / 改 / 弃用功能
 功能: :gear:
@@ -69,6 +73,7 @@ git commit -m '新功能: :tada: 一个新功能' -m '初始提交首页'
 ```
 
 **修复**
+
 ```shell
 # 修复问题
 修复: :bug:
@@ -78,6 +83,7 @@ git commit -m '新功能: :tada: 一个新功能' -m '初始提交首页'
 ```
 
 **文字**
+
 ```shell
 # 增 / 删 / 改 / 弃用文档
 文档: :memo:
@@ -93,72 +99,84 @@ git commit -m '新功能: :tada: 一个新功能' -m '初始提交首页'
 ```
 
 **安全**
+
 ```shell
 # 增 / 删 / 改 / 弃用安全措施
 安全: :shield:
 ```
 
 **性能**
+
 ```shell
 # 增 / 删 / 改 / 弃用性能措施
 性能: :racehorse:
 ```
 
 **皮肤**
+
 ```shell
 # 增 / 删 / 改 / 弃用皮肤
 皮肤: :lipstick:
 ```
 
 **测试**
+
 ```shell
 # 增 / 删 / 改 / 弃用测试用例
 测试: :white_check_mark:
 ```
 
 **架构**
+
 ```shell
 # 架构的修改，无论工程亦或是核心业务。
 架构: :building_construction:
 ```
 
 **重构**
+
 ```shell
 # 大范围架构的修改，无论工程亦或是核心业务。
 重构: :recycle:
 ```
 
 **可访问性**
+
 ```shell
 # 增 / 删 / 改 / 弃用可访问性措施。
 可访问性: :wheelchair:
 ```
 
 **体验**
+
 ```shell
 # 增 / 删 / 改 / 弃用用户体验 / 可使用性措施。
 体验: :children_crossing:
 ```
 
 **数据库**
+
 ```shell
 # 增 / 删 / 改 / 弃用数据库。
 数据库: :children_crossing:
 ```
 
 **监控**
+
 ```shell
 # 增 / 删 / 改 / 弃用分析 / 追踪相关的措施。
 监控: :chart_with_upwards_trend:
 ```
 
 **配置**
+
 ```shell
 # 增 / 删 / 改 / 弃用配置
 配置: :wrench:
 ```
 
 **依赖**
+
 ```shell
 # 移除依赖
 依赖: :heavy_minus_sign:
@@ -174,6 +192,7 @@ git commit -m '新功能: :tada: 一个新功能' -m '初始提交首页'
 ```
 
 **工程**
+
 ```shell
 # 增 / 删 / 改 / 弃用工作流（自动化管道、构建指令）
 工作流: :railway_track:
@@ -201,6 +220,7 @@ git commit -m '新功能: :tada: 一个新功能' -m '初始提交首页'
 ```
 
 **贡献者**
+
 ```shell
 # 增 / 删 / 改 / 弃用贡献者。
 贡献者: :construction_worker:
