@@ -1,4 +1,4 @@
-[![Package Quality](https://npm.packagequality.com/shield/@oopsunome%2Ffast-gitignore.svg)](https://packagequality.com/#?package=@oopsunome/fast-gitignore)
+![node v10.13.0+](https://img.shields.io/badge/node.js-v10.13.0%2B-green?style=flat) [![Package Quality](https://npm.packagequality.com/shield/@oopsunome%2Ffast-gitignore.svg)](https://packagequality.com/#?package=@oopsunome/fast-gitignore)
 
 # `@oopsunome/fast-gitignore`
 
