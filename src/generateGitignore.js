@@ -3,35 +3,31 @@ import { readFile } from 'fs';
 import path from 'path';
 
 import callsites from 'callsites';
-import join from 'lodash/join';
 import fg from 'fast-glob';
 import pMap from 'p-map';
-import isArray from 'lodash/isArray';
-import isString from 'lodash/isString';
-import isEmpty from 'lodash/isEmpty';
-import isEqual from 'lodash/isEqual';
-import size from 'lodash/size';
 
 import saveFile from './saveFile';
 import resolveRoot from './resolveRoot';
+import isStr from './isStr';
+import isEmpty from './isEmpty';
 
 const generateGitignore = async (ignores, to) => {
   let glob;
 
-  if (isArray(ignores)) {
-    glob = `{${join(ignores, ',')}}`;
+  if (Array.isArray(ignores)) {
+    glob = `{${ignores.join(',')}}`;
   }
 
-  if (isArray(ignores) && isEqual(size(ignores), 1)) {
+  if (Array.isArray(ignores) && ignores.length === 1) {
     const [topic] = ignores;
     glob = topic;
   }
 
-  if (isString(ignores)) {
+  if (isStr(ignores)) {
     glob = ignores;
   }
 
-  if ((!isArray(ignores) && !isString(ignores)) || isEmpty(ignores)) {
+  if ((!Array.isArray(ignores) && !isStr(ignores)) || isEmpty(ignores)) {
     throw Error('必须提供内容主题');
   }
 
@@ -42,7 +38,7 @@ const generateGitignore = async (ignores, to) => {
     ),
   ]);
 
-  const tplData = join(
+  const tplData = (
     await pMap(
       tplPaths,
       async (filePath) => {
@@ -50,9 +46,8 @@ const generateGitignore = async (ignores, to) => {
         return content;
       },
       { concurrency: 8 },
-    ),
-    '\n\n\n',
-  );
+    )
+  ).join('\n\n\n');
 
   await saveFile(tplData, resolveRoot('.gitignore', to));
 };
