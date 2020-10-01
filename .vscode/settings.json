@@ -8,7 +8,8 @@
     "**/.DS_Store": true,
     "**/.nyc_output": true,
     "**/node_modules": true,
-    "**/.eslintcache": true
+    "**/.eslintcache": true,
+    "**/*.tgz": true
   },
   "files.trimFinalNewlines": true,
   "files.trimTrailingWhitespace": true,
