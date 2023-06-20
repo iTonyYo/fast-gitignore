@@ -30,10 +30,10 @@
     "chalk": "^4.1.0",
     "cosmiconfig": "^7.0.0",
     "fast-glob": "^3.2.4",
-    "meow": "^7.1.1",
+    "meow": "^8.0.0",
     "p-map": "^4.0.0",
     "redent": "^3.0.0",
-    "update-notifier": "^4.1.1",
+    "update-notifier": "^6.0.0",
     "write-file-atomic": "^3.0.3"
   },
   "private": false,
